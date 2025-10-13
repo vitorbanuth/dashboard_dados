@@ -1,1 +1,1 @@
-nohup streamlit run src/app.py &
+nohup streamlit run dashboard.py &
