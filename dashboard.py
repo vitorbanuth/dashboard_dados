@@ -2,13 +2,10 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# -------------------------------------------------------
-# 📁 Carregar dataset fixo
-# -------------------------------------------------------
+
 DATA_PATH = "decompressed_data.csv"
 df = pd.read_csv(DATA_PATH)
 
-# Selecionar apenas as 10 colunas relevantes
 colunas_principais = [
     "ano", "expectativa_vida", "fecundidade_total", "mortalidade_1",
     "mortalidade_5", "razao_dependencia", "prob_sobrevivencia_40",
@@ -16,9 +13,6 @@ colunas_principais = [
 ]
 df = df[colunas_principais]
 
-# -------------------------------------------------------
-# 🧠 Análises básicas (EDA) com Pandas
-# -------------------------------------------------------
 st.title("📊 Indicadores Sociais do Brasil")
 
 st.write("Alunos: Vitor Banuth, João Vitor")
@@ -26,24 +20,13 @@ st.subheader("📋 Estrutura dos Dados")
 st.write("**Dimensões:**", df.shape)
 st.write("**Tipos de Dados:**")
 st.write(df.dtypes)
-# st.write("**Valores ausentes:**")
-# st.write(df.isna().sum())
 
-# -------------------------------------------------------
-# 📄 Pré-visualização dos dados
-# -------------------------------------------------------
 st.subheader("📄 Visualização dos Dados")
 st.dataframe(df.head())
 
-# -------------------------------------------------------
-# 📊 Estatísticas descritivas
-# -------------------------------------------------------
 st.subheader("📈 Estatísticas Descritivas")
 st.write(df.describe())
 
-# -------------------------------------------------------
-# 📈 Gráfico de linha de indicador ao longo dos anos
-# -------------------------------------------------------
 st.subheader("📈 Evolução dos Indicadores ao Longo dos Anos")
 
 indicador = st.selectbox(
@@ -55,9 +38,6 @@ fig_line = px.line(df, x="ano", y=indicador, markers=True,
                    title=f"Evolução de {indicador} ao longo dos anos")
 st.plotly_chart(fig_line, use_container_width=True)
 
-# -------------------------------------------------------
-# 🔗 Correlação entre indicadores
-# -------------------------------------------------------
 st.subheader("🔗 Correlação entre Indicadores")
 corr = df.corr(numeric_only=True)
 st.dataframe(corr)
@@ -70,9 +50,6 @@ fig_corr = px.imshow(
 )
 st.plotly_chart(fig_corr, use_container_width=True)
 
-# -------------------------------------------------------
-# 🔍 Correlações específicas e análise
-# -------------------------------------------------------
 st.subheader("📉 Relações Interessantes")
 
 corr_ev_mort1 = corr.loc["expectativa_vida", "mortalidade_1"]
@@ -86,6 +63,3 @@ if corr_ev_mort1 < 0:
 if corr_ev_fec < 0:
     st.info("🔎 Correlação negativa: quanto menor a fecundidade, maior a expectativa de vida.")
 
-# -------------------------------------------------------
-# 🌐 Gráficos de dispersão das correlações
-# -------------------------------------------------------
