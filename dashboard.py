@@ -21,7 +21,7 @@ colunas_map = {
     "ano": "Ano",
     "expectativa_vida": "Expectativa de Vida",
     "fecundidade_total": "Fecundidade Total",
-    "mortalidade_1": "Mortalidade até 1 ano",
+    "mortalidade_1": "Mortalidade até 1 ano (Por 1000 Vivos)",
     "prob_sobrevivencia_60": "Probabilidade de Sobrevivência até 60 anos",
     "taxa_envelhecimento": "Taxa de Envelhecimento",
     "expectativa_anos_estudo": "Expectativa de Anos de Estudo",
@@ -99,5 +99,28 @@ if corr_ev_mort1 < 0:
     st.info("🔎 Correlação negativa: quanto menor a mortalidade infantil, maior a expectativa de vida.")
 if corr_ev_fec < 0:
     st.info("🔎 Correlação negativa: quanto menor a fecundidade, maior a expectativa de vida.")
+
+st.write("\n")
+st.write("\n")
+st.write("\n")
+st.write("\n")
+
+st.subheader(" 📄 Relatório Final")
+
+st.write("""
+**Indicadores Sociais do Brasil (1991–2010):**
+
+- A expectativa de vida aumentou de **64,7** para **73,9 anos**, indicando melhoria nas condições de saúde e qualidade de vida.  
+- A fecundidade total caiu de **2,88** para **1,89 filhos por mulher**, mostrando redução no número médio de filhos e transição demográfica.  
+- A mortalidade até 1 ano diminuiu de **44,68** para **16,7 por mil nascidos**, reflexo de melhorias na saúde materno-infantil.  
+- A probabilidade de sobrevivência até 60 anos cresceu de **70,9%** para **84,0%**, reforçando o aumento da longevidade.  
+- A taxa de envelhecimento passou de **4,83%** para **7,36%**, resultado da combinação entre menor fecundidade e maior expectativa de vida.  
+- A expectativa de anos de estudo subiu de **8,16** para **9,54 anos**, mostrando avanço na escolarização média da população.  
+- As taxas de analfabetismo diminuíram em todas as faixas etárias, com destaque para a faixa de **11 a 14 anos**, que caiu de **16,08%** para **3,24%**.  
+
+**Resumo:**  
+O Brasil se tornou um país com população mais escolarizada, com menos nascimentos e mais idosos, refletindo melhorias sociais e educacionais, mas também novos desafios relacionados ao envelhecimento populacional.
+""")
+
 
 
