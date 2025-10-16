@@ -1,1 +1,1 @@
-nohup streamlit run dashboard.py &
+nohup streamlit run --server.port 80 dashboard.py &
