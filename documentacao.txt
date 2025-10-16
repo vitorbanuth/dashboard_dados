@@ -1,0 +1,67 @@
+﻿Objetivo do Projeto
+
+
+Alunos: Vitor Banuth, João Victor
+
+
+O projeto tem como objetivo realizar uma Análise Exploratória de Dados (EDA) sobre indicadores sociais do Brasil entre os anos de 1991 e 2010, utilizando Python, Pandas, Plotly e Streamlit. A aplicação permite visualizar e compreender a evolução de variáveis relacionadas à saúde, educação e demografia, destacando tendências e correlações entre indicadores como expectativa de vida, mortalidade infantil, fecundidade e taxa de analfabetismo.
+
+
+Ferramentas Utilizadas
+O projeto foi desenvolvido em Python, com as bibliotecas Pandas para manipulação de dados, Plotly para geração de gráficos interativos e Streamlit para construção do painel web de visualização.
+
+
+Estrutura dos Dados
+O dataset utilizado é um arquivo CSV contendo indicadores sociais do Brasil. As principais colunas analisadas foram:
+
+
+* ano: ano de referência
+* expectativa_vida: expectativa média de vida ao nascer (em anos)
+* fecundidade_total: número médio de filhos por mulher
+* mortalidade_1: mortalidade até 1 ano de idade (por mil nascidos vivos)
+* prob_sobrevivencia_60: probabilidade de sobreviver até os 60 anos (em %)
+* taxa_envelhecimento: proporção da população idosa (em %)
+* expectativa_anos_estudo: média de anos de estudo da população (em anos)
+* taxa_analfabetismo_11_a_14: percentual de analfabetismo entre 11 e 14 anos (em %)
+* taxa_analfabetismo_18_mais: percentual de analfabetismo entre pessoas de 18 anos ou mais (em %)
+
+
+Funcionalidades do Dashboard
+O dashboard desenvolvido no Streamlit apresenta diferentes seções interativas:
+
+
+1. Visualização e Estrutura dos Dados
+   Exibe informações gerais sobre o dataset, incluindo dimensões, tipos de dados e as primeiras linhas da tabela.
+
+
+2. Gráfico de Evolução Temporal
+   Permite ao usuário selecionar um indicador e visualizar sua evolução ao longo dos anos por meio de um gráfico de linha interativo.
+
+
+3. Mapa de Correlação
+   Mostra a correlação entre as variáveis numéricas do dataset em forma de mapa de calor. Os valores de correlação foram limitados entre -0.99 e 0.99 para facilitar a leitura.
+
+
+4. Análises de Correlação Específicas
+   O sistema calcula e interpreta automaticamente a correlação entre alguns indicadores selecionados, como expectativa de vida e mortalidade até 1 ano, e expectativa de vida e fecundidade total.
+
+
+Interpretação dos Resultados
+Entre 1991 e 2010, o Brasil apresentou avanços significativos em diversos indicadores sociais.
+
+
+A expectativa de vida aumentou de 64,7 para 73,9 anos, indicando melhorias nas condições de saúde e qualidade de vida.
+A mortalidade até 1 ano diminuiu de 44,6 para 16,7 por mil nascidos, reflexo de políticas públicas na área da saúde.
+A expectativa de anos de estudo passou de 8,1 para 9,5 anos, mostrando um avanço na escolarização média da população.
+A taxa de envelhecimento cresceu de 4,8% para 7,3%, indicando uma transição demográfica com mais idosos e menos jovens.
+As taxas de analfabetismo diminuíram em todas as faixas etárias, com destaque para a faixa de 11 a 14 anos, que caiu de 16% para 3%.
+A fecundidade total reduziu de 2,88 para 1,89 filhos por mulher, indicando um processo de transição demográfica.
+
+
+As análises de correlação mostraram que existe uma relação negativa entre expectativa de vida e mortalidade infantil, e também entre expectativa de vida e fecundidade, o que significa que à medida que a mortalidade e a fecundidade diminuem, a expectativa de vida tende a aumentar.
+
+
+Conclusão
+
+
+O dashboard demonstra o uso prático de Pandas para análise de dados e de Streamlit e Plotly para visualização interativa. A análise evidencia a transição social e demográfica do Brasil entre 1991 e 2010, com aumento da expectativa de vida, redução da fecundidade e analfabetismo, e envelhecimento populacional. Esses avanços refletem melhorias em saúde e educação, mas também trazem novos desafios sociais e econômicos relacionados ao envelhecimento da população.
