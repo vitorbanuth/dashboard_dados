@@ -89,7 +89,7 @@ st.plotly_chart(fig_corr, use_container_width=True)
 st.subheader("📉 Relações Interessantes")
 
 # Calcula correlações específicas
-corr_ev_mort1 = corr.loc["Expectativa de Vida", "Mortalidade até 1 ano"]
+corr_ev_mort1 = corr.loc["Expectativa de Vida", "Mortalidade até 1 ano (Por 1000 Vivos)"]
 corr_ev_fec = corr.loc["Expectativa de Vida", "Fecundidade Total"]
 
 st.write(f"➡️ Correlação entre **Expectativa de Vida** e **Mortalidade até 1 ano**: {corr_ev_mort1:.2f}")
